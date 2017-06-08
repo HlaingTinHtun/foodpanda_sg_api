@@ -18,8 +18,6 @@ class RestaurantTableCreate extends Migration
             $table->string('name');
             $table->string('logo');
             $table->string('detail_link');
-            $table->string('type');
-            $table->integer('delivery_duration');
             $table->integer('postal_code');
             $table->timestamps();
 

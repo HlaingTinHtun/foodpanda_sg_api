@@ -64,15 +64,11 @@ class HomeController extends Controller
         $linkTag = $content->find('a', 0);
         $imageTag = $content->find('div[class=vendor__image] img', 0);
         $titleTag = $content->find('div[class=vendor__details] div[class=vendor__title] span[class=vendor__name]', 0);
-        $category = $content->find('div[class=vendor__details] ul[class=vendor__cuisines] li', 0);
-        $deliTime = $content->find('div[class=vendor__info] ul[class=vendor__availability] li[class=vendor__delivery-time] span[class=delivery-time-label] span[class=minutes]', 0);
-
+       
         $array = [
             'name' => $titleTag->innertext,
             'logo' => $imageTag->attr['src'],
             'detail_link' => 'www.foodpanda.sg/' . $linkTag->attr['href'],
-            'category' => $category->innertext,
-            'delivery_duration' => $deliTime->innertext,
             'postal_code' => $postCode,
         ];
 
