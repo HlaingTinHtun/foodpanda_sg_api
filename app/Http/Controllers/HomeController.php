@@ -39,12 +39,14 @@ class HomeController extends Controller
                 if ($request->insertdatabase == 'true') {
                     if (Restaurants::where('postal_code', $postcode)->count() < $valCount) {
                         Restaurants::create($data[$count - 1]);
+                        $message = "Inserted To Database";
                     } else {
-                        return $this->responseData($request, '', 200, 'Record Already Exists');
+                        $message = "Record Already exist";
                     }
                 }
+
             }
-            return $this->responseData($request, $data, 200, '');
+            return $this->responseData($request, $data, 200, $message);
 
         } else {
             return $this->responseData($request, '', 404);
