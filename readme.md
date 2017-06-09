@@ -28,7 +28,7 @@ Note : In real `API`,  I will run this `database` insert function with `Queue` o
 
 ## EndPoints to test in project.
 
-Filter the restaurants with postal code
+### Filter the restaurants with postal code
 - http://foodpanda.app/restaurants?postcode=123440
-If you want to add the data to database , you can use that one
+### If you want to add the data to database , you can use that one
 -  http://foodpanda.app/restaurants?postcode=123440&insertdatabase=true
