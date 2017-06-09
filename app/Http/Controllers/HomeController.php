@@ -153,7 +153,7 @@ class HomeController extends Controller
                 'meta' => array('method' => $method,
                     'endpoint' => $path),
                 'data' => $data,
-                'errors' => array('message' => 'Area Does Not Exist', 'code' => '204'),
+                'errors' => array('message' => 'Area Does Not Exist', 'code' => '400'),
                 'duration' => $responseTime,
             ))->send();
         }
