@@ -29,7 +29,7 @@ class HomeController extends Controller
 
             $count = 0;
             $valCount = 1;
-
+            $message = '';
 
             foreach ($string->find('section[class=js-infscroll-load-more-here] article') as $content) {
 
